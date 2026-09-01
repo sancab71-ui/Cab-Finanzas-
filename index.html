@@ -390,8 +390,8 @@ canvas{
       </div>
 
       <div>
-        <label>Cuenta</label>
-        <select id="txAccount"></select>
+        <label>Cuenta / Medio</label>
+<select id="txAccount"></select>
       </div>
 
       <div class="full">
@@ -661,11 +661,13 @@ function defaultState(){
   return {
 
     accounts:[
-      {name:'Efectivo',initialBalance:0},
-      {name:'Banco',initialBalance:0},
-      {name:'Tarjeta',initialBalance:0},
-      {name:'Negocio',initialBalance:0}
-    ],
+{name:'Efectivo',initialBalance:0},
+{name:'Banco',initialBalance:0},
+{name:'Tarjeta',initialBalance:0},
+{name:'Negocio',initialBalance:0},
+{name:'Transferencia',initialBalance:0},
+{name:'Depósito',initialBalance:0}
+],
 
     transactions:[],
 
