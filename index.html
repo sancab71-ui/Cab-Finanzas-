@@ -710,19 +710,76 @@ accounts:[
 
 function loadState(){
 
+  let data;
+
   try{
 
     const saved = localStorage.getItem(KEY);
 
     if(saved){
-      return JSON.parse(saved);
+      data = JSON.parse(saved);
     }
 
   }catch(error){}
 
-  return defaultState();
+  if(!data){
+    data = defaultState();
+  }
 
+  if(!Array.isArray(data.accounts)){
+    data.accounts = [];
+  }
+
+  // Convierte la antigua "Tarjeta" en "Tarjeta de crédito"
+  const oldCard = data.accounts.find(a => a.name === 'Tarjeta');
+
+  if(oldCard){
+
+    oldCard.name = 'Tarjeta de crédito';
+
+    if(typeof oldCard.initialBalance === 'undefined'){
+      oldCard.initialBalance = Number(oldCard.balance || 0);
+    }
+
+  }
+
+  // Cuentas / medios que siempre deben existir
+  const requiredAccounts = [
+    'Efectivo',
+    'Banco',
+    'Tarjeta de débito',
+    'Tarjeta de crédito',
+    'Negocio',
+    'Transferencia',
+    'Depósito'
+  ];
+
+  requiredAccounts.forEach(name => {
+
+    const exists = data.accounts.some(
+      account => account.name === name
+    );
+
+    if(!exists){
+
+      data.accounts.push({
+        name:name,
+        initialBalance:0
+      });
+
+    }
+
+  });
+
+  localStorage.setItem(
+    KEY,
+    JSON.stringify(data)
+  );
+
+  return data;
 }
+
+
 
 function persist(){
 
