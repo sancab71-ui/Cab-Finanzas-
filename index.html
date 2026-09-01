@@ -653,7 +653,33 @@ const categories = {
 };
 
 let state = loadState();
+const requiredAccounts = [
+'Efectivo',
+'Banco',
+'Tarjeta de débito',
+'Tarjeta de crédito',
+'Negocio',
+'Transferencia',
+'Depósito'
+];
 
+requiredAccounts.forEach(name=>{
+
+if(!state.accounts.some(a=>a.name===name)){
+
+state.accounts.push({
+name,
+initialBalance:0
+});
+
+}
+
+});
+
+localStorage.setItem(
+KEY,
+JSON.stringify(state)
+);
 let selectedCategory = 'Alimentos';
 
 function defaultState(){
