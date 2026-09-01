@@ -9,322 +9,304 @@
 
 <style>
 :root{
---bg:#0b0d12;
---card:#151922;
---soft:#1d2330;
---text:#f4f7fb;
---muted:#9ca6b7;
---green:#35d07f;
---red:#ff6868;
---gold:#d8ff4f;
---line:#293041;
+  --bg:#0b0d12;
+  --card:#151922;
+  --soft:#1d2330;
+  --text:#f4f7fb;
+  --muted:#9ca6b7;
+  --green:#35d07f;
+  --red:#ff6868;
+  --gold:#d8ff4f;
+  --line:#293041;
 }
 
 *{box-sizing:border-box}
 
 body{
-margin:0;
-background:#0b0d12;
-color:var(--text);
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-padding-bottom:100px;
+  margin:0;
+  background:#0b0d12;
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  padding-bottom:100px;
 }
 
 header{
-padding:20px 18px 12px;
-position:sticky;
-top:0;
-background:rgba(11,13,18,.95);
-backdrop-filter:blur(15px);
-z-index:20;
-border-bottom:1px solid #202532;
+  padding:20px 18px 12px;
+  position:sticky;
+  top:0;
+  background:rgba(11,13,18,.95);
+  backdrop-filter:blur(15px);
+  z-index:20;
+  border-bottom:1px solid #202532;
 }
 
 .brand{
-font-size:12px;
-letter-spacing:2px;
-color:var(--gold);
-font-weight:900;
+  font-size:12px;
+  letter-spacing:2px;
+  color:var(--gold);
+  font-weight:900;
 }
 
 .title{
-font-size:29px;
-font-weight:850;
-margin-top:5px;
+  font-size:29px;
+  font-weight:850;
+  margin-top:5px;
 }
 
 .container{
-padding:14px;
-max-width:760px;
-margin:auto;
+  padding:14px;
+  max-width:760px;
+  margin:auto;
 }
 
 .card{
-background:var(--card);
-border:1px solid #242b38;
-border-radius:24px;
-padding:18px;
-margin-bottom:14px;
+  background:var(--card);
+  border:1px solid #242b38;
+  border-radius:24px;
+  padding:18px;
+  margin-bottom:14px;
 }
 
-.hero{
-padding:22px;
-}
+.hero{padding:22px}
 
 .balance{
-font-size:42px;
-font-weight:900;
-margin:12px 0 18px;
+  font-size:42px;
+  font-weight:900;
+  margin:12px 0 18px;
 }
 
 .grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:12px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
 }
 
 .metric{
-background:#11151d;
-border-radius:17px;
-padding:14px;
+  background:#11151d;
+  border-radius:17px;
+  padding:14px;
 }
 
 .metric strong{
-font-size:22px;
-display:block;
-margin-top:7px;
+  font-size:22px;
+  display:block;
+  margin-top:7px;
 }
 
 .income{color:var(--green)}
 .expense{color:var(--red)}
 
 .muted{
-color:var(--muted);
-font-size:13px;
+  color:var(--muted);
+  font-size:13px;
 }
 
 h3{
-margin:0 0 14px;
-font-size:20px;
+  margin:0 0 14px;
+  font-size:20px;
 }
 
 input,select{
-width:100%;
-background:#0f131a;
-color:#fff;
-border:1px solid #30394a;
-border-radius:14px;
-padding:14px;
-font-size:16px;
-outline:none;
+  width:100%;
+  background:#0f131a;
+  color:#fff;
+  border:1px solid #30394a;
+  border-radius:14px;
+  padding:14px;
+  font-size:16px;
+  outline:none;
 }
 
 label{
-font-size:12px;
-color:var(--muted);
-display:block;
-margin:11px 0 6px;
+  font-size:12px;
+  color:var(--muted);
+  display:block;
+  margin:11px 0 6px;
 }
 
 button,.btn{
-border:0;
-border-radius:14px;
-padding:13px 15px;
-font-weight:800;
-font-size:15px;
-background:var(--gold);
-color:#101408;
-cursor:pointer;
+  border:0;
+  border-radius:14px;
+  padding:13px 15px;
+  font-weight:800;
+  font-size:15px;
+  background:var(--gold);
+  color:#101408;
+  cursor:pointer;
 }
 
 .btn-dark{
-background:var(--soft);
-color:white;
-border:1px solid #343d4e;
-}
-
-.btn-red{
-background:#3a1d24;
-color:#ff9ba6;
+  background:var(--soft);
+  color:white;
+  border:1px solid #343d4e;
 }
 
 .form-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:10px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
 }
 
-.full{
-grid-column:1/-1;
-}
+.full{grid-column:1/-1}
 
 .category-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:8px;
-margin-top:10px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:8px;
+  margin-top:10px;
 }
 
 .category-btn{
-background:#151b25;
-color:#dbe1ec;
-border:1px solid #2a3342;
-font-size:12px;
-padding:12px 5px;
+  background:#151b25;
+  color:#dbe1ec;
+  border:1px solid #2a3342;
+  font-size:13px;
+  padding:12px 5px;
 }
 
 .category-btn.selected{
-background:var(--gold);
-color:#111;
+  background:var(--gold);
+  color:#111;
 }
 
 .row{
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:10px;
-padding:13px 0;
-border-bottom:1px solid var(--line);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  padding:13px 0;
+  border-bottom:1px solid var(--line);
 }
 
-.row:last-child{
-border-bottom:none;
-}
+.row:last-child{border-bottom:none}
 
 .tx-left{
-min-width:0;
-flex:1;
+  min-width:0;
+  flex:1;
 }
 
 .tx-title{
-font-weight:800;
-font-size:16px;
+  font-weight:800;
+  font-size:16px;
 }
 
 .tx-sub{
-font-size:12px;
-color:var(--muted);
-margin-top:4px;
+  font-size:12px;
+  color:var(--muted);
+  margin-top:4px;
 }
 
-.tx-right{
-text-align:right;
-}
+.tx-right{text-align:right}
 
 .tx-actions{
-display:flex;
-gap:7px;
-justify-content:flex-end;
-margin-top:5px;
+  display:flex;
+  gap:7px;
+  justify-content:flex-end;
+  margin-top:5px;
 }
 
 .small-btn{
-padding:6px 9px;
-font-size:11px;
-border-radius:9px;
-background:#222936;
-color:#dce2eb;
+  padding:6px 9px;
+  font-size:11px;
+  border-radius:9px;
+  background:#222936;
+  color:#dce2eb;
 }
 
-.small-btn.delete{
-color:#ff969f;
-}
+.small-btn.delete{color:#ff969f}
 
 .progress{
-height:9px;
-background:#0e1218;
-border-radius:99px;
-overflow:hidden;
-margin-top:8px;
+  height:9px;
+  background:#0e1218;
+  border-radius:99px;
+  overflow:hidden;
+  margin-top:8px;
 }
 
 .progress span{
-display:block;
-height:100%;
-background:var(--gold);
+  display:block;
+  height:100%;
+  background:var(--gold);
 }
 
 nav{
-position:fixed;
-left:0;
-right:0;
-bottom:0;
-z-index:30;
-display:grid;
-grid-template-columns:repeat(5,1fr);
-background:rgba(11,14,20,.97);
-backdrop-filter:blur(18px);
-border-top:1px solid #28303c;
-padding:8px 5px calc(8px + env(safe-area-inset-bottom));
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:30;
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  background:rgba(11,14,20,.97);
+  backdrop-filter:blur(18px);
+  border-top:1px solid #28303c;
+  padding:8px 5px calc(8px + env(safe-area-inset-bottom));
 }
 
 nav button{
-background:transparent;
-color:#929bad;
-padding:8px 2px;
-font-size:11px;
+  background:transparent;
+  color:#929bad;
+  padding:8px 2px;
+  font-size:11px;
 }
 
 nav button.active{
-background:var(--gold);
-color:#111;
+  background:var(--gold);
+  color:#111;
 }
 
 .tab{display:none}
 .tab.active{display:block}
 
 .empty{
-text-align:center;
-color:var(--muted);
-padding:26px 5px;
+  text-align:center;
+  color:var(--muted);
+  padding:26px 5px;
 }
 
 .actions{
-display:flex;
-gap:8px;
-flex-wrap:wrap;
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
 }
 
 canvas{
-width:100%;
-height:190px;
-background:#10141b;
-border-radius:16px;
+  width:100%;
+  height:190px;
+  background:#10141b;
+  border-radius:16px;
 }
 
 .modal{
-display:none;
-position:fixed;
-inset:0;
-background:rgba(0,0,0,.75);
-z-index:100;
-padding:18px;
-overflow:auto;
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.75);
+  z-index:100;
+  padding:18px;
+  overflow:auto;
 }
 
-.modal.open{
-display:block;
-}
+.modal.open{display:block}
 
 .modal-card{
-max-width:600px;
-margin:50px auto;
-background:#151922;
-border:1px solid #30394a;
-border-radius:25px;
-padding:20px;
+  max-width:600px;
+  margin:50px auto;
+  background:#151922;
+  border:1px solid #30394a;
+  border-radius:25px;
+  padding:20px;
 }
 
 .modal-title{
-font-size:23px;
-font-weight:850;
-margin-bottom:15px;
+  font-size:23px;
+  font-weight:850;
+  margin-bottom:15px;
 }
 
 @media(max-width:520px){
-.form-grid{grid-template-columns:1fr}
-.category-grid{grid-template-columns:repeat(2,1fr)}
-.balance{font-size:38px}
+  .form-grid{grid-template-columns:1fr}
+  .balance{font-size:38px}
 }
 </style>
 </head>
@@ -332,1488 +314,1594 @@ margin-bottom:15px;
 <body>
 
 <header>
-<div class="brand">CAB FINANZAS</div>
-<div id="headerTitle" class="title">Inicio</div>
+  <div class="brand">CAB FINANZAS</div>
+  <div id="headerTitle" class="title">Inicio</div>
 </header>
 
 <div class="container">
 
 <section id="inicio" class="tab active">
 
-<div class="card hero">
-<div class="muted">Saldo total</div>
-<div id="totalBalance" class="balance">$0.00</div>
+  <div class="card hero">
+    <div class="muted">Saldo total</div>
+    <div id="totalBalance" class="balance">$0.00</div>
 
-<div class="grid">
-<div class="metric">
-<div class="muted">Ingresos del mes</div>
-<strong id="monthIncome" class="income">$0.00</strong>
-</div>
+    <div class="grid">
+      <div class="metric">
+        <div class="muted">Ingresos del mes</div>
+        <strong id="monthIncome" class="income">$0.00</strong>
+      </div>
 
-<div class="metric">
-<div class="muted">Egresos del mes</div>
-<strong id="monthExpense" class="expense">$0.00</strong>
-</div>
-</div>
-</div>
+      <div class="metric">
+        <div class="muted">Egresos del mes</div>
+        <strong id="monthExpense" class="expense">$0.00</strong>
+      </div>
+    </div>
+  </div>
 
-<div class="card">
-<h3>Ingresos vs egresos</h3>
-<canvas id="chart" width="700" height="260"></canvas>
-</div>
+  <div class="card">
+    <h3>Ingresos vs egresos</h3>
+    <canvas id="chart" width="700" height="260"></canvas>
+  </div>
 
-<div class="card">
-<h3>Alertas de presupuesto</h3>
-<div id="budgetAlerts"></div>
-</div>
+  <div class="card">
+    <h3>Alertas de presupuesto</h3>
+    <div id="budgetAlerts"></div>
+  </div>
 
-<div class="card">
-<h3>Últimos movimientos</h3>
-<div id="latestTransactions"></div>
-</div>
+  <div class="card">
+    <h3>Últimos movimientos</h3>
+    <div id="latestTransactions"></div>
+  </div>
 
 </section>
 
 <section id="movimientos" class="tab">
-
-<div class="card">
-<h3>Movimientos</h3>
-
-<input
-id="search"
-placeholder="Buscar categoría, cuenta o nota"
-oninput="renderTransactions()"
->
-
-<div id="transactionsList"></div>
-</div>
-
+  <div class="card">
+    <h3>Movimientos</h3>
+    <input id="search" placeholder="Buscar categoría, cuenta o nota">
+    <div id="transactionsList"></div>
+  </div>
 </section>
 
 <section id="registrar" class="tab">
 
-<div class="card">
+  <div class="card">
+    <h3>Nuevo movimiento</h3>
 
-<h3>Nuevo movimiento</h3>
+    <div class="form-grid">
 
-<div class="form-grid">
+      <div>
+        <label>Tipo</label>
+        <select id="txType">
+          <option>Ingreso</option>
+          <option selected>Egreso</option>
+        </select>
+      </div>
 
-<div>
-<label>Tipo</label>
-<select id="txType" onchange="renderCategoryButtons()">
-<option>Ingreso</option>
-<option selected>Egreso</option>
-</select>
-</div>
+      <div>
+        <label>Monto</label>
+        <input id="txAmount" type="number" inputmode="decimal" placeholder="0.00">
+      </div>
 
-<div>
-<label>Monto</label>
-<input id="txAmount" type="number" inputmode="decimal" placeholder="$0.00">
-</div>
+      <div>
+        <label>Fecha</label>
+        <input id="txDate" type="date">
+      </div>
 
-<div>
-<label>Fecha</label>
-<input id="txDate" type="date">
-</div>
+      <div>
+        <label>Cuenta</label>
+        <select id="txAccount"></select>
+      </div>
 
-<div>
-<label>Cuenta</label>
-<select id="txAccount"></select>
-</div>
+      <div class="full">
+        <label>Categoría</label>
+        <div id="categoryButtons" class="category-grid"></div>
+      </div>
 
-<div class="full">
-<label>Categoría</label>
-<div id="categoryButtons" class="category-grid"></div>
-</div>
+      <div class="full">
+        <label>Nota</label>
+        <input id="txNote" placeholder="Opcional">
+      </div>
 
-<div class="full">
-<label>Nota</label>
-<input id="txNote" placeholder="Ej. gasolina, comida, venta...">
-</div>
+      <div class="full">
+        <button id="saveTxBtn" style="width:100%">Guardar movimiento</button>
+      </div>
 
-<div class="full">
-<button onclick="addTransaction()" style="width:100%">
-Guardar movimiento
-</button>
-</div>
-
-</div>
-</div>
+    </div>
+  </div>
 
 </section>
 
 <section id="plan" class="tab">
 
-<div class="card">
+  <div class="card">
+    <h3>Cuentas</h3>
+    <div id="accountsList"></div>
 
-<h3>Cuentas</h3>
+    <div class="form-grid">
+      <div>
+        <label>Nombre</label>
+        <input id="accountName" placeholder="Ej. BBVA">
+      </div>
 
-<div id="accountsList"></div>
+      <div>
+        <label>Saldo inicial</label>
+        <input id="accountInitial" type="number" inputmode="decimal" placeholder="0.00">
+      </div>
 
-<div class="form-grid">
+      <div class="full">
+        <button id="addAccountBtn">Agregar cuenta</button>
+      </div>
+    </div>
+  </div>
 
-<div>
-<label>Nombre</label>
-<input id="accountName" placeholder="Ej. BBVA">
-</div>
+  <div class="card">
+    <h3>Presupuestos mensuales</h3>
+    <div id="budgetsList"></div>
 
-<div>
-<label>Saldo inicial</label>
-<input id="accountBalance" type="number" inputmode="decimal">
-</div>
+    <div class="form-grid">
+      <div>
+        <label>Categoría</label>
+        <input id="budgetCategory" placeholder="Ej. Alimentos">
+      </div>
 
-<div class="full">
-<button onclick="addAccount()">Agregar cuenta</button>
-</div>
+      <div>
+        <label>Límite</label>
+        <input id="budgetLimit" type="number" inputmode="decimal">
+      </div>
 
-</div>
-</div>
+      <div class="full">
+        <button id="addBudgetBtn">Agregar presupuesto</button>
+      </div>
+    </div>
+  </div>
 
-<div class="card">
+  <div class="card">
+    <h3>Metas de ahorro</h3>
+    <div id="goalsList"></div>
 
-<h3>Presupuestos mensuales</h3>
+    <div class="form-grid">
+      <div>
+        <label>Meta</label>
+        <input id="goalName" placeholder="Ej. Fondo de emergencia">
+      </div>
 
-<div id="budgetsList"></div>
+      <div>
+        <label>Objetivo</label>
+        <input id="goalTarget" type="number" inputmode="decimal">
+      </div>
 
-<div class="form-grid">
+      <div>
+        <label>Ahorrado</label>
+        <input id="goalCurrent" type="number" inputmode="decimal">
+      </div>
 
-<div>
-<label>Categoría</label>
-<input id="budgetCategory" placeholder="Ej. Alimentos">
-</div>
+      <div>
+        <label>Fecha objetivo</label>
+        <input id="goalDate" type="date">
+      </div>
 
-<div>
-<label>Límite</label>
-<input id="budgetLimit" type="number" inputmode="decimal">
-</div>
+      <div class="full">
+        <button id="addGoalBtn">Agregar meta</button>
+      </div>
+    </div>
+  </div>
 
-<div class="full">
-<button onclick="addBudget()">Agregar presupuesto</button>
-</div>
+  <div class="card">
+    <h3>Deudas / préstamos</h3>
+    <div id="debtsList"></div>
 
-</div>
-</div>
+    <div class="form-grid">
+      <div>
+        <label>Nombre</label>
+        <input id="debtName" placeholder="Ej. Tarjeta">
+      </div>
 
-<div class="card">
+      <div>
+        <label>Total</label>
+        <input id="debtTotal" type="number" inputmode="decimal">
+      </div>
 
-<h3>Metas de ahorro</h3>
+      <div>
+        <label>Pendiente</label>
+        <input id="debtRemaining" type="number" inputmode="decimal">
+      </div>
 
-<div id="goalsList"></div>
+      <div>
+        <label>Pago mensual</label>
+        <input id="debtPayment" type="number" inputmode="decimal">
+      </div>
 
-<div class="form-grid">
-
-<div>
-<label>Meta</label>
-<input id="goalName" placeholder="Ej. Vacaciones">
-</div>
-
-<div>
-<label>Objetivo</label>
-<input id="goalTarget" type="number" inputmode="decimal">
-</div>
-
-<div>
-<label>Ahorrado</label>
-<input id="goalCurrent" type="number" inputmode="decimal">
-</div>
-
-<div>
-<label>Fecha objetivo</label>
-<input id="goalDate" type="date">
-</div>
-
-<div class="full">
-<button onclick="addGoal()">Agregar meta</button>
-</div>
-
-</div>
-</div>
-
-<div class="card">
-
-<h3>Deudas / préstamos</h3>
-
-<div id="debtsList"></div>
-
-<div class="form-grid">
-
-<div>
-<label>Nombre</label>
-<input id="debtName" placeholder="Ej. Tarjeta">
-</div>
-
-<div>
-<label>Total</label>
-<input id="debtTotal" type="number" inputmode="decimal">
-</div>
-
-<div>
-<label>Pendiente</label>
-<input id="debtRemaining" type="number" inputmode="decimal">
-</div>
-
-<div>
-<label>Pago mensual</label>
-<input id="debtPayment" type="number" inputmode="decimal">
-</div>
-
-<div class="full">
-<button onclick="addDebt()">Agregar deuda</button>
-</div>
-
-</div>
-
-</div>
+      <div class="full">
+        <button id="addDebtBtn">Agregar deuda</button>
+      </div>
+    </div>
+  </div>
 
 </section>
 
 <section id="mas" class="tab">
 
-<div class="card">
+  <div class="card">
+    <h3>Respaldo de información</h3>
 
-<h3>Respaldo de información</h3>
+    <p class="muted">
+      Tus datos se guardan automáticamente en este iPhone.
+    </p>
 
-<p class="muted">
-Aquí puedes guardar una copia completa de tus datos y restaurarla posteriormente.
-</p>
+    <div class="actions">
+      <button id="backupBtn">Crear respaldo</button>
 
-<div class="actions">
+      <label class="btn btn-dark">
+        Restaurar respaldo
+        <input id="restoreInput" type="file" accept=".json" style="display:none">
+      </label>
 
-<button onclick="backupJSON()">
-Crear respaldo
-</button>
+      <button id="csvBtn" class="btn-dark">
+        Exportar CSV
+      </button>
+    </div>
+  </div>
 
-<label class="btn btn-dark">
-Restaurar respaldo
-<input
-type="file"
-accept=".json"
-onchange="restoreBackup(event)"
-style="display:none"
->
-</label>
+  <div class="card">
+    <h3>Información</h3>
 
-<button class="btn-dark" onclick="exportCSV()">
-Exportar movimientos CSV
-</button>
+    <div class="row">
+      <div>
+        <div class="tx-title">CAB Finanzas</div>
+        <div class="tx-sub">Versión limpia 4.0</div>
+      </div>
 
-</div>
-
-</div>
-
-<div class="card">
-
-<h3>Información</h3>
-
-<div class="row">
-<div>
-<div class="tx-title">CAB Finanzas</div>
-<div class="tx-sub">Versión 3.0</div>
-</div>
-<div>💰</div>
-</div>
-
-</div>
+      <div>💰</div>
+    </div>
+  </div>
 
 </section>
 
 </div>
 
 <nav>
-
-<button class="active" onclick="showTab('inicio',this,'Inicio')">
-⌂<br>Inicio
-</button>
-
-<button onclick="showTab('movimientos',this,'Movimientos')">
-☷<br>Movimientos
-</button>
-
-<button onclick="showTab('registrar',this,'Registrar')">
-＋<br>Registrar
-</button>
-
-<button onclick="showTab('plan',this,'Planeación')">
-◎<br>Plan
-</button>
-
-<button onclick="showTab('mas',this,'Más')">
-•••<br>Más
-</button>
-
+<button class="active" data-tab="inicio" data-title="Inicio">⌂<br>Inicio</button>
+<button data-tab="movimientos" data-title="Movimientos">☷<br>Movimientos</button>
+<button data-tab="registrar" data-title="Registrar">＋<br>Registrar</button>
+<button data-tab="plan" data-title="Planeación">◎<br>Plan</button>
+<button data-tab="mas" data-title="Más">•••<br>Más</button>
 </nav>
 
 <div id="editModal" class="modal">
 
-<div class="modal-card">
+  <div class="modal-card">
 
-<div class="modal-title">Editar movimiento</div>
+    <div class="modal-title">Editar movimiento</div>
 
-<input type="hidden" id="editId">
+    <input type="hidden" id="editId">
 
-<label>Tipo</label>
-<select id="editType">
-<option>Ingreso</option>
-<option>Egreso</option>
-</select>
+    <label>Tipo</label>
+    <select id="editType">
+      <option>Ingreso</option>
+      <option>Egreso</option>
+    </select>
 
-<label>Monto</label>
-<input id="editAmount" type="number" inputmode="decimal">
+    <label>Monto</label>
+    <input id="editAmount" type="number" inputmode="decimal">
 
-<label>Fecha</label>
-<input id="editDate" type="date">
+    <label>Fecha</label>
+    <input id="editDate" type="date">
 
-<label>Cuenta</label>
-<select id="editAccount"></select>
+    <label>Cuenta</label>
+    <select id="editAccount"></select>
 
-<label>Categoría</label>
-<input id="editCategory">
+    <label>Categoría</label>
+    <input id="editCategory">
 
-<label>Nota</label>
-<input id="editNote">
+    <label>Nota</label>
+    <input id="editNote">
 
-<div class="actions" style="margin-top:18px">
+    <div class="actions" style="margin-top:18px">
 
-<button onclick="saveEdit()">
-Guardar cambios
-</button>
+      <button id="saveEditBtn">
+        Guardar cambios
+      </button>
 
-<button class="btn-dark" onclick="closeEdit()">
-Cancelar
-</button>
+      <button id="cancelEditBtn" class="btn-dark">
+        Cancelar
+      </button>
 
-</div>
+    </div>
 
-</div>
+  </div>
+
 </div>
 
 <script>
 
-const KEY='cab_finanzas_v3';
+const $ = id => document.getElementById(id);
 
-const previousKeys=[
-'cab_finanzas_v2',
-'cab_finanzas_v1'
-];
+const KEY = 'cab_finanzas_clean_v4';
+
+const categories = {
+
+  Ingreso:[
+    'Depósito',
+    'Sueldo',
+    'Negocio',
+    'Ventas',
+    'Cobranza',
+    'Inversión',
+    'Transferencia',
+    'Préstamo recibido',
+    'Otros'
+  ],
+
+  Egreso:[
+    'Alimentos',
+    'Transporte',
+    'Gasolina',
+    'Servicios',
+    'Compras',
+    'Salud',
+    'Entretenimiento',
+    'Deudas',
+    'Negocio',
+    'Familia',
+    'Iglesia',
+    'Transferencia',
+    'Otros'
+  ]
+
+};
+
+let state = loadState();
+
+let selectedCategory = 'Alimentos';
+
+function defaultState(){
+
+  return {
+
+    accounts:[
+      {name:'Efectivo',initialBalance:0},
+      {name:'Banco',initialBalance:0},
+      {name:'Tarjeta',initialBalance:0},
+      {name:'Negocio',initialBalance:0}
+    ],
+
+    transactions:[],
+
+    budgets:[],
+
+    goals:[],
+
+    debts:[]
+
+  };
+
+}
 
 function loadState(){
 
-let saved=localStorage.getItem(KEY);
+  try{
 
-if(saved){
-return JSON.parse(saved);
-}
+    const saved = localStorage.getItem(KEY);
 
-for(const k of previousKeys){
+    if(saved){
+      return JSON.parse(saved);
+    }
 
-const old=localStorage.getItem(k);
+  }catch(error){}
 
-if(old){
-
-const data=JSON.parse(old);
-
-localStorage.setItem(KEY,JSON.stringify(data));
-
-return data;
+  return defaultState();
 
 }
 
-}
+function persist(){
 
-return{
-
-accounts:[
-{name:'Efectivo',balance:0},
-{name:'Banco',balance:0},
-{name:'Tarjeta',balance:0},
-{name:'Negocio',balance:0}
-],
-
-transactions:[],
-budgets:[],
-goals:[],
-debts:[]
-
-};
+  localStorage.setItem(
+    KEY,
+    JSON.stringify(state)
+  );
 
 }
-
-let state=loadState();
-
-let selectedCategory='Alimentos';
-
-
-
-const categories={
-
-Ingreso:[
-'Depósito',
-'Sueldo',
-'Negocio',
-'Ventas',
-'Cobranza',
-'Inversión',
-'Transferencia',
-'Préstamo recibido',
-'Otros'
-],
-
-Egreso:[
-'Alimentos',
-'Transporte',
-'Gasolina',
-'Servicios',
-'Compras',
-'Salud',
-'Entretenimiento',
-'Deudas',
-'Negocio',
-'Familia',
-'Iglesia',
-'Transferencia',
-'Otros'
-]
-
-};
-
-const money=n=>
-new Intl.NumberFormat(
-'es-MX',
-{
-style:'currency',
-currency:'MXN'
-}
-).format(Number(n||0));
 
 function localToday(){
 
-const d=new Date();
+  const d = new Date();
 
-return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
-
-}
-
-txDate.value=localToday();
-
-function save(){
-
-localStorage.setItem(
-KEY,
-JSON.stringify(state)
-);
-
-renderAll();
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
 
 }
 
-function showTab(id,button,title){
+function money(n){
 
-document
-.querySelectorAll('.tab')
-.forEach(x=>x.classList.remove('active'));
+  return new Intl.NumberFormat(
+    'es-MX',
+    {
+      style:'currency',
+      currency:'MXN'
+    }
+  ).format(Number(n||0));
 
-document
-.getElementById(id)
-.classList.add('active');
+}
 
-document
-.querySelectorAll('nav button')
-.forEach(x=>x.classList.remove('active'));
+function escapeHTML(text){
 
-button.classList.add('active');
-
-headerTitle.textContent=title;
-
-window.scrollTo(0,0);
+  return String(text ?? '')
+    .replaceAll('&','&amp;')
+    .replaceAll('<','&lt;')
+    .replaceAll('>','&gt;')
+    .replaceAll('"','&quot;')
+    .replaceAll("'","&#39;");
 
 }
 
 function currentMonthTransactions(){
 
-const now=new Date();
+  const now = new Date();
 
-const year=now.getFullYear();
-const month=now.getMonth()+1;
+  const year = now.getFullYear();
 
-return state.transactions.filter(t=>{
+  const month = now.getMonth()+1;
 
-const parts=t.date.split('-');
+  return state.transactions.filter(t=>{
 
-if(parts.length!==3)return false;
+    const p = String(t.date||'').split('-');
 
-return Number(parts[0])===year &&
-Number(parts[1])===month;
+    return p.length===3 &&
+      Number(p[0])===year &&
+      Number(p[1])===month;
 
-});
+  });
+
+}
+
+function accountBalance(accountName){
+
+  const account =
+    state.accounts.find(a=>a.name===accountName);
+
+  const initial =
+    Number(account?.initialBalance || 0);
+
+  const net =
+    state.transactions
+      .filter(t=>t.account===accountName)
+      .reduce(
+        (sum,t)=>
+          sum +
+          (
+            t.type==='Ingreso'
+              ? Number(t.amount||0)
+              : -Number(t.amount||0)
+          ),
+        0
+      );
+
+  return initial + net;
+
+}
+
+function totalBalance(){
+
+  return state.accounts.reduce(
+    (sum,a)=>sum + accountBalance(a.name),
+    0
+  );
+
+}
+
+function showTab(id,button,title){
+
+  document
+    .querySelectorAll('.tab')
+    .forEach(x=>x.classList.remove('active'));
+
+  $(id).classList.add('active');
+
+  document
+    .querySelectorAll('nav button')
+    .forEach(x=>x.classList.remove('active'));
+
+  button.classList.add('active');
+
+  $('headerTitle').textContent=title;
+
+  window.scrollTo(0,0);
 
 }
 
 function renderCategoryButtons(){
 
-const type=txType.value;
+  const type=$('txType').value;
 
-const list=categories[type];
+  const list=categories[type];
 
-if(!list.includes(selectedCategory)){
-selectedCategory=list[0];
-}
+  if(!list.includes(selectedCategory)){
+    selectedCategory=list[0];
+  }
 
-categoryButtons.innerHTML=
-list.map(cat=>`
+  $('categoryButtons').innerHTML =
+    list.map(cat=>
 
-<button
-type="button"
-class="category-btn ${cat===selectedCategory?'selected':''}"
-onclick="selectCategory('${cat}')"
->
-${cat}
-</button>
+      `<button
+        type="button"
+        class="category-btn ${cat===selectedCategory?'selected':''}"
+        data-category="${escapeHTML(cat)}">
+        ${escapeHTML(cat)}
+      </button>`
 
-`).join('');
+    ).join('');
 
-}
+  document
+    .querySelectorAll('.category-btn')
+    .forEach(btn=>{
 
-function selectCategory(cat){
+      btn.addEventListener(
+        'click',
+        ()=>{
 
-selectedCategory=cat;
+          selectedCategory=btn.dataset.category;
 
-renderCategoryButtons();
+          renderCategoryButtons();
+
+        }
+      );
+
+    });
 
 }
 
 function addTransaction(){
 
-const type=txType.value;
+  const type=$('txType').value;
 
-const amount=Number(txAmount.value);
+  const amount=Number($('txAmount').value);
 
-const account=txAccount.value;
+  const account=$('txAccount').value;
 
-if(!amount || amount<=0){
+  if(!amount || amount<=0){
 
-alert('Ingresa un monto válido.');
+    alert('Ingresa un monto válido.');
 
-return;
+    return;
 
-}
+  }
 
-state.transactions.unshift({
+  state.transactions.unshift({
 
-id:Date.now(),
+    id:Date.now(),
 
-type,
+    type,
 
-amount,
+    amount,
 
-date:txDate.value||localToday(),
+    date:$('txDate').value || localToday(),
 
-account,
+    account,
 
-category:selectedCategory,
+    category:selectedCategory,
 
-note:txNote.value.trim()
+    note:$('txNote').value.trim()
 
-});
+  });
 
-recalculateAccounts();
+  $('txAmount').value='';
 
-txAmount.value='';
-txNote.value='';
+  $('txNote').value='';
 
-save();
+  persist();
 
-alert('Movimiento guardado.');
+  renderAll();
 
-}
-
-function recalculateAccounts(){
-
-// Reparación única del saldo fantasma de versiones anteriores
-if(!state.balanceRepairV1){
-
-state.accounts.forEach(a=>{
-
-a.initialBalance=0;
-a.balance=0;
-
-});
-
-state.balanceRepairV1=true;
-
-}
-
-// Reinicia cada cuenta desde su saldo inicial real
-state.accounts.forEach(a=>{
-
-a.balance=Number(a.initialBalance||0);
-
-});
-
-// Vuelve a calcular usando únicamente los movimientos existentes
-state.transactions.forEach(t=>{
-
-const account=
-state.accounts.find(a=>a.name===t.account);
-
-if(!account)return;
-
-if(t.type==='Ingreso'){
-
-account.balance+=Number(t.amount||0);
-
-}else{
-
-account.balance-=Number(t.amount||0);
-
-}
-
-});
+  alert('Movimiento guardado.');
 
 }
 
 function editTx(id){
 
-const tx=
-state.transactions.find(t=>t.id===id);
+  const tx=
+    state.transactions.find(t=>t.id===id);
 
-if(!tx)return;
+  if(!tx)return;
 
-editId.value=tx.id;
+  $('editId').value=tx.id;
 
-editType.value=tx.type;
+  $('editType').value=tx.type;
 
-editAmount.value=tx.amount;
+  $('editAmount').value=tx.amount;
 
-editDate.value=tx.date;
+  $('editDate').value=tx.date;
 
-editAccount.innerHTML=
-state.accounts
-.map(a=>
-`<option ${a.name===tx.account?'selected':''}>${a.name}</option>`
-)
-.join('');
+  $('editAccount').innerHTML=
+    state.accounts
+      .map(a=>
+        `<option ${a.name===tx.account?'selected':''}>
+          ${escapeHTML(a.name)}
+        </option>`
+      )
+      .join('');
 
-editCategory.value=tx.category;
+  $('editCategory').value=tx.category;
 
-editNote.value=tx.note||'';
+  $('editNote').value=tx.note || '';
 
-editModal.classList.add('open');
-
-}
-
-function closeEdit(){
-
-editModal.classList.remove('open');
+  $('editModal').classList.add('open');
 
 }
 
 function saveEdit(){
 
-const id=Number(editId.value);
+  const id=Number($('editId').value);
 
-const tx=
-state.transactions.find(t=>t.id===id);
+  const tx=
+    state.transactions.find(t=>t.id===id);
 
-if(!tx)return;
+  if(!tx)return;
 
-const amount=Number(editAmount.value);
+  const amount=
+    Number($('editAmount').value);
 
-if(!amount || amount<=0){
+  if(!amount || amount<=0){
 
-alert('Ingresa un monto válido.');
+    alert('Ingresa un monto válido.');
 
-return;
+    return;
 
-}
+  }
 
-tx.type=editType.value;
-tx.amount=amount;
-tx.date=editDate.value;
-tx.account=editAccount.value;
-tx.category=editCategory.value.trim()||'Otros';
-tx.note=editNote.value.trim();
+  tx.type=$('editType').value;
 
-recalculateAccounts();
+  tx.amount=amount;
 
-save();
+  tx.date=$('editDate').value || localToday();
 
-closeEdit();
+  tx.account=$('editAccount').value;
+
+  tx.category=
+    $('editCategory').value.trim() || 'Otros';
+
+  tx.note=
+    $('editNote').value.trim();
+
+  persist();
+
+  $('editModal').classList.remove('open');
+
+  renderAll();
 
 }
 
 function deleteTx(id){
 
-if(!confirm('¿Eliminar este movimiento?')){
-return;
-}
+  if(!confirm('¿Eliminar este movimiento?')){
+    return;
+  }
 
-state.transactions=
-state.transactions.filter(t=>t.id!==id);
+  state.transactions=
+    state.transactions.filter(t=>t.id!==id);
 
-recalculateAccounts();
+  persist();
 
-save();
+  renderAll();
 
 }
 
 function addAccount(){
 
-const name=
-accountName.value.trim();
+  const name=
+    $('accountName').value.trim();
 
-if(!name)return;
+  const initialBalance=
+    Number($('accountInitial').value || 0);
 
-const balance=
-Number(accountBalance.value||0);
+  if(!name)return;
 
-state.accounts.push({
+  if(
+    state.accounts.some(
+      a=>a.name.toLowerCase()===name.toLowerCase()
+    )
+  ){
 
-name,
+    alert('Esa cuenta ya existe.');
 
-balance,
+    return;
 
-initialBalance:balance
+  }
 
-});
+  state.accounts.push({
 
-accountName.value='';
-accountBalance.value='';
+    name,
 
-save();
+    initialBalance
+
+  });
+
+  $('accountName').value='';
+
+  $('accountInitial').value='';
+
+  persist();
+
+  renderAll();
 
 }
 
 function addBudget(){
 
-const category=
-budgetCategory.value.trim();
+  const category=
+    $('budgetCategory').value.trim();
 
-const limit=
-Number(budgetLimit.value);
+  const limit=
+    Number($('budgetLimit').value);
 
-if(!category||!limit)return;
+  if(!category || !limit || limit<=0)return;
 
-state.budgets.push({
+  state.budgets.push({
 
-id:Date.now(),
+    id:Date.now(),
 
-category,
+    category,
 
-limit
+    limit
 
-});
+  });
 
-budgetCategory.value='';
-budgetLimit.value='';
+  $('budgetCategory').value='';
 
-save();
+  $('budgetLimit').value='';
+
+  persist();
+
+  renderAll();
 
 }
 
 function addGoal(){
 
-const name=
-goalName.value.trim();
+  const name=
+    $('goalName').value.trim();
 
-const target=
-Number(goalTarget.value);
+  const target=
+    Number($('goalTarget').value);
 
-if(!name||!target)return;
+  if(!name || !target || target<=0)return;
 
-state.goals.push({
+  state.goals.push({
 
-id:Date.now(),
+    id:Date.now(),
 
-name,
+    name,
 
-target,
+    target,
 
-current:Number(goalCurrent.value||0),
+    current:Number($('goalCurrent').value||0),
 
-date:goalDate.value
+    date:$('goalDate').value
 
-});
+  });
 
-goalName.value='';
-goalTarget.value='';
-goalCurrent.value='';
+  $('goalName').value='';
 
-save();
+  $('goalTarget').value='';
+
+  $('goalCurrent').value='';
+
+  persist();
+
+  renderAll();
 
 }
 
 function addDebt(){
 
-const name=
-debtName.value.trim();
+  const name=
+    $('debtName').value.trim();
 
-const total=
-Number(debtTotal.value);
+  const total=
+    Number($('debtTotal').value);
 
-if(!name||!total)return;
+  if(!name || !total || total<=0)return;
 
-state.debts.push({
+  state.debts.push({
 
-id:Date.now(),
+    id:Date.now(),
 
-name,
+    name,
 
-total,
+    total,
 
-remaining:Number(debtRemaining.value||total),
+    remaining:Number(
+      $('debtRemaining').value || total
+    ),
 
-payment:Number(debtPayment.value||0)
+    payment:Number(
+      $('debtPayment').value || 0
+    )
 
-});
+  });
 
-debtName.value='';
-debtTotal.value='';
-debtRemaining.value='';
-debtPayment.value='';
+  $('debtName').value='';
 
-save();
+  $('debtTotal').value='';
 
-}
+  $('debtRemaining').value='';
 
-function esc(text){
+  $('debtPayment').value='';
 
-return String(text||'')
-.replaceAll('&','&amp;')
-.replaceAll('<','&lt;')
-.replaceAll('>','&gt;')
-.replaceAll('"','&quot;')
-.replaceAll("'","&#39;");
+  persist();
+
+  renderAll();
 
 }
 
 function transactionRow(t){
 
-return `
+  return `
 
-<div class="row">
+  <div class="row">
 
-<div class="tx-left">
+    <div class="tx-left">
 
-<div class="tx-title">
-${esc(t.category)}
-</div>
+      <div class="tx-title">
+        ${escapeHTML(t.category)}
+      </div>
 
-<div class="tx-sub">
-${esc(t.account)} • ${t.date}
-${t.note?' • '+esc(t.note):''}
-</div>
+      <div class="tx-sub">
+        ${escapeHTML(t.account)}
+        •
+        ${escapeHTML(t.date)}
+        ${t.note?' • '+escapeHTML(t.note):''}
+      </div>
 
-</div>
+    </div>
 
-<div class="tx-right">
+    <div class="tx-right">
 
-<div class="${t.type==='Ingreso'?'income':'expense'}" style="font-weight:850">
+      <div
+        class="${t.type==='Ingreso'?'income':'expense'}"
+        style="font-weight:850">
 
-${t.type==='Ingreso'?'+':'-'}
-${money(t.amount)}
+        ${t.type==='Ingreso'?'+':'-'}
 
-</div>
+        ${money(t.amount)}
 
-<div class="tx-actions">
+      </div>
 
-<button
-class="small-btn"
-onclick="editTx(${t.id})">
-Editar
-</button>
+      <div class="tx-actions">
 
-<button
-class="small-btn delete"
-onclick="deleteTx(${t.id})">
-Eliminar
-</button>
+        <button
+          class="small-btn edit-btn"
+          data-id="${t.id}">
+          Editar
+        </button>
 
-</div>
+        <button
+          class="small-btn delete delete-btn"
+          data-id="${t.id}">
+          Eliminar
+        </button>
 
-</div>
+      </div>
 
-</div>
+    </div>
 
-`;
+  </div>
+
+  `;
+
+}
+
+function wireTransactionButtons(){
+
+  document
+    .querySelectorAll('.edit-btn')
+    .forEach(b=>
+
+      b.addEventListener(
+        'click',
+        ()=>editTx(Number(b.dataset.id))
+      )
+
+    );
+
+  document
+    .querySelectorAll('.delete-btn')
+    .forEach(b=>
+
+      b.addEventListener(
+        'click',
+        ()=>deleteTx(Number(b.dataset.id))
+      )
+
+    );
 
 }
 
 function renderTransactions(){
 
-const q=
-(search.value||'').toLowerCase();
+  const q=
+    $('search').value.toLowerCase();
 
-const filtered=
-state.transactions.filter(t=>
+  const filtered=
+    state.transactions.filter(t=>
 
-[
-t.category,
-t.account,
-t.note,
-t.type
-]
+      [
+        t.category,
+        t.account,
+        t.note,
+        t.type
+      ]
 
-.join(' ')
-.toLowerCase()
-.includes(q)
+      .join(' ')
+      .toLowerCase()
+      .includes(q)
 
-);
+    );
 
-transactionsList.innerHTML=
-filtered.length
-?
-filtered.map(transactionRow).join('')
-:
-'<div class="empty">Sin movimientos</div>';
+  $('transactionsList').innerHTML=
+
+    filtered.length
+
+      ? filtered.map(transactionRow).join('')
+
+      : '<div class="empty">Sin movimientos</div>';
+
+  wireTransactionButtons();
 
 }
 
 function renderAll(){
 
-const monthTx=
-currentMonthTransactions();
-
-const income=
-monthTx
-.filter(t=>t.type==='Ingreso')
-.reduce((s,t)=>s+Number(t.amount),0);
+  const mt=
+    currentMonthTransactions();
 
-const expense=
-monthTx
-.filter(t=>t.type==='Egreso')
-.reduce((s,t)=>s+Number(t.amount),0);
+  const income=
+    mt
+      .filter(t=>t.type==='Ingreso')
+      .reduce(
+        (s,t)=>s+Number(t.amount),
+        0
+      );
 
-const total=
-state.accounts.reduce(
-(s,a)=>s+Number(a.balance||0),
-0
-);
+  const expense=
+    mt
+      .filter(t=>t.type==='Egreso')
+      .reduce(
+        (s,t)=>s+Number(t.amount),
+        0
+      );
 
-totalBalance.textContent=
-money(total);
+  $('totalBalance').textContent=
+    money(totalBalance());
 
-monthIncome.textContent=
-money(income);
+  $('monthIncome').textContent=
+    money(income);
 
-monthExpense.textContent=
-money(expense);
+  $('monthExpense').textContent=
+    money(expense);
 
-latestTransactions.innerHTML=
-state.transactions.length
-?
-state.transactions
-.slice(0,5)
-.map(transactionRow)
-.join('')
-:
-'<div class="empty">Sin movimientos</div>';
+  $('latestTransactions').innerHTML=
 
-txAccount.innerHTML=
-state.accounts
-.map(a=>
-`<option>${esc(a.name)}</option>`
-)
-.join('');
+    state.transactions.length
 
-accountsList.innerHTML=
-state.accounts
-.map(a=>`
+      ? state.transactions
+          .slice(0,5)
+          .map(transactionRow)
+          .join('')
 
-<div class="row">
+      : '<div class="empty">Sin movimientos</div>';
 
-<div>
+  wireTransactionButtons();
 
-<div class="tx-title">
-${esc(a.name)}
-</div>
+  $('txAccount').innerHTML=
 
-<div class="tx-sub">
-Saldo actual
-</div>
+    state.accounts
 
-</div>
+      .map(a=>
+        `<option>${escapeHTML(a.name)}</option>`
+      )
 
-<div style="font-weight:850">
-${money(a.balance)}
-</div>
+      .join('');
 
-</div>
+  $('accountsList').innerHTML=
 
-`)
-.join('');
+    state.accounts
 
-budgetsList.innerHTML=
-state.budgets.length
-?
-state.budgets.map(b=>`
+      .map(a=>
 
-<div class="row">
+        `<div class="row">
 
-<div class="tx-title">
-${esc(b.category)}
-</div>
+          <div>
 
-<div>
-${money(b.limit)}
-</div>
+            <div class="tx-title">
+              ${escapeHTML(a.name)}
+            </div>
 
-</div>
+            <div class="tx-sub">
+              Saldo actual
+            </div>
 
-`).join('')
-:
-'<div class="empty">Sin presupuestos</div>';
+          </div>
 
-goalsList.innerHTML=
-state.goals.length
-?
-state.goals.map(g=>{
+          <div style="font-weight:850">
+            ${money(accountBalance(a.name))}
+          </div>
 
-const percent=
-Math.min(
-100,
-(g.current/g.target)*100||0
-);
+        </div>`
 
-return `
+      )
 
-<div style="padding:12px 0">
+      .join('');
 
-<div style="display:flex;justify-content:space-between">
+  $('budgetsList').innerHTML=
 
-<strong>
-${esc(g.name)}
-</strong>
+    state.budgets.length
 
-<span>
-${money(g.current)}
-/
-${money(g.target)}
-</span>
+      ? state.budgets
 
-</div>
+          .map(b=>
 
-<div class="progress">
-<span style="width:${percent}%"></span>
-</div>
+            `<div class="row">
 
-</div>
+              <div class="tx-title">
+                ${escapeHTML(b.category)}
+              </div>
 
-`;
+              <div>
+                ${money(b.limit)}
+              </div>
 
-}).join('')
-:
-'<div class="empty">Sin metas</div>';
+            </div>`
 
-debtsList.innerHTML=
-state.debts.length
-?
-state.debts.map(d=>`
+          )
 
-<div class="row">
+          .join('')
 
-<div>
+      : '<div class="empty">Sin presupuestos</div>';
 
-<div class="tx-title">
-${esc(d.name)}
-</div>
+  $('goalsList').innerHTML=
 
-<div class="tx-sub">
-Pago mensual:
-${money(d.payment)}
-</div>
+    state.goals.length
 
-</div>
+      ? state.goals
 
-<div style="font-weight:850">
-${money(d.remaining)}
-</div>
+          .map(g=>{
 
-</div>
+            const percent=
+              Math.min(
+                100,
+                (
+                  Number(g.current||0) /
+                  Number(g.target||1)
+                ) * 100
+              );
 
-`).join('')
-:
-'<div class="empty">Sin deudas</div>';
+            return `
 
-const spentByCategory={};
+              <div style="padding:12px 0">
 
-monthTx
-.filter(t=>t.type==='Egreso')
-.forEach(t=>{
+                <div style="display:flex;justify-content:space-between">
 
-spentByCategory[t.category]=
-(spentByCategory[t.category]||0)
-+
-Number(t.amount);
+                  <strong>
+                    ${escapeHTML(g.name)}
+                  </strong>
 
-});
+                  <span>
+                    ${money(g.current)}
+                    /
+                    ${money(g.target)}
+                  </span>
 
-budgetAlerts.innerHTML=
-state.budgets.length
-?
-state.budgets.map(b=>{
+                </div>
 
-const spent=
-spentByCategory[b.category]||0;
+                <div class="progress">
+                  <span style="width:${percent}%"></span>
+                </div>
 
-const percent=
-Math.min(
-100,
-(spent/b.limit)*100||0
-);
+              </div>
 
-return `
+            `;
 
-<div style="margin-bottom:15px">
+          })
 
-<div style="display:flex;justify-content:space-between">
+          .join('')
 
-<strong>${esc(b.category)}</strong>
+      : '<div class="empty">Sin metas</div>';
 
-<span class="muted">
-${money(spent)}
-/
-${money(b.limit)}
-</span>
+  $('debtsList').innerHTML=
 
-</div>
+    state.debts.length
 
-<div class="progress">
-<span style="width:${percent}%"></span>
-</div>
+      ? state.debts
 
-${percent>=80
-?
-`<div class="tx-sub">
-${percent>=100
-?
-'⚠️ Presupuesto excedido'
-:
-'⚠️ Ya utilizaste 80% o más'}
-</div>`
-:
-''
-}
+          .map(d=>
 
-</div>
+            `<div class="row">
 
-`;
+              <div>
 
-}).join('')
-:
-'<div class="empty">Agrega presupuestos para ver alertas</div>';
+                <div class="tx-title">
+                  ${escapeHTML(d.name)}
+                </div>
 
-renderTransactions();
+                <div class="tx-sub">
+                  Pago mensual:
+                  ${money(d.payment)}
+                </div>
 
-renderCategoryButtons();
+              </div>
 
-drawChart(income,expense);
+              <div style="font-weight:850">
+                ${money(d.remaining)}
+              </div>
+
+            </div>`
+
+          )
+
+          .join('')
+
+      : '<div class="empty">Sin deudas</div>';
+
+  const spentByCategory={};
+
+  mt
+    .filter(t=>t.type==='Egreso')
+    .forEach(t=>{
+
+      spentByCategory[t.category]=
+        (
+          spentByCategory[t.category] || 0
+        )
+        +
+        Number(t.amount);
+
+    });
+
+  $('budgetAlerts').innerHTML=
+
+    state.budgets.length
+
+      ? state.budgets
+
+          .map(b=>{
+
+            const spent=
+              spentByCategory[b.category] || 0;
+
+            const percent=
+              Math.min(
+                100,
+                (
+                  spent /
+                  Number(b.limit||1)
+                ) * 100
+              );
+
+            return `
+
+              <div style="margin-bottom:15px">
+
+                <div style="display:flex;justify-content:space-between">
+
+                  <strong>
+                    ${escapeHTML(b.category)}
+                  </strong>
+
+                  <span class="muted">
+                    ${money(spent)}
+                    /
+                    ${money(b.limit)}
+                  </span>
+
+                </div>
+
+                <div class="progress">
+                  <span style="width:${percent}%"></span>
+                </div>
+
+                ${
+                  percent>=80
+
+                    ? `<div class="tx-sub">
+                        ${
+                          percent>=100
+                            ? '⚠️ Presupuesto excedido'
+                            : '⚠️ Ya utilizaste 80% o más'
+                        }
+                      </div>`
+
+                    : ''
+                }
+
+              </div>
+
+            `;
+
+          })
+
+          .join('')
+
+      : '<div class="empty">Agrega presupuestos para ver alertas</div>';
+
+  renderTransactions();
+
+  renderCategoryButtons();
+
+  drawChart(
+    income,
+    expense
+  );
 
 }
 
 function drawChart(income,expense){
 
-const canvas=
-document.getElementById('chart');
+  const c=$('chart');
 
-const ctx=
-canvas.getContext('2d');
+  const ctx=c.getContext('2d');
 
-const width=canvas.width;
-const height=canvas.height;
+  const w=c.width;
 
-ctx.clearRect(
-0,
-0,
-width,
-height
-);
+  const h=c.height;
 
-ctx.fillStyle='#10141b';
+  ctx.clearRect(0,0,w,h);
 
-ctx.fillRect(
-0,
-0,
-width,
-height
-);
+  ctx.fillStyle='#10141b';
 
-const max=
-Math.max(
-income,
-expense,
-1
-);
+  ctx.fillRect(0,0,w,h);
 
-const base=
-height-45;
+  const max=
+    Math.max(
+      income,
+      expense,
+      1
+    );
 
-const barWidth=150;
+  const base=h-45;
 
-const incomeX=120;
+  const bw=150;
 
-const expenseX=390;
+  const x1=120;
 
-const incomeHeight=
-(income/max)*(height-90);
+  const x2=390;
 
-const expenseHeight=
-(expense/max)*(height-90);
+  const h1=
+    (income/max)*(h-90);
 
-ctx.fillStyle='#35d07f';
+  const h2=
+    (expense/max)*(h-90);
 
-ctx.fillRect(
-incomeX,
-base-incomeHeight,
-barWidth,
-incomeHeight
-);
+  ctx.fillStyle='#35d07f';
 
-ctx.fillStyle='#ff6868';
+  ctx.fillRect(
+    x1,
+    base-h1,
+    bw,
+    h1
+  );
 
-ctx.fillRect(
-expenseX,
-base-expenseHeight,
-barWidth,
-expenseHeight
-);
+  ctx.fillStyle='#ff6868';
 
-ctx.fillStyle='#f4f7fb';
+  ctx.fillRect(
+    x2,
+    base-h2,
+    bw,
+    h2
+  );
 
-ctx.font=
-'24px -apple-system';
+  ctx.fillStyle='#f4f7fb';
 
-ctx.fillText(
-'Ingresos',
-incomeX+20,
-height-12
-);
+  ctx.font='24px -apple-system';
 
-ctx.fillText(
-'Egresos',
-expenseX+30,
-height-12
-);
+  ctx.fillText(
+    'Ingresos',
+    x1+20,
+    h-12
+  );
 
-ctx.fillStyle='#9ca6b7';
+  ctx.fillText(
+    'Egresos',
+    x2+30,
+    h-12
+  );
 
-ctx.font=
-'19px -apple-system';
+  ctx.fillStyle='#9ca6b7';
 
-ctx.fillText(
-money(income),
-incomeX,
-base-incomeHeight-10
-);
+  ctx.font='19px -apple-system';
 
-ctx.fillText(
-money(expense),
-expenseX,
-base-expenseHeight-10
-);
+  ctx.fillText(
+    money(income),
+    x1,
+    base-h1-10
+  );
 
-}
-
-function backupJSON(){
-
-const backup={
-
-version:'CAB Finanzas 3.0',
-
-created:new Date().toISOString(),
-
-data:state
-
-};
-
-downloadBlob(
-
-new Blob(
-[
-JSON.stringify(
-backup,
-null,
-2
-)
-],
-{
-type:'application/json'
-}
-),
-
-`CAB_Finanzas_Respaldo_${localToday()}.json`
-
-);
-
-}
-
-function restoreBackup(event){
-
-const file=
-event.target.files[0];
-
-if(!file)return;
-
-const reader=
-new FileReader();
-
-reader.onload=()=>{
-
-try{
-
-const backup=
-JSON.parse(reader.result);
-
-const restored=
-backup.data || backup;
-
-if(
-!restored.accounts ||
-!restored.transactions
-){
-
-throw new Error();
-
-}
-
-if(
-!confirm(
-'Esto reemplazará los datos actuales. ¿Deseas continuar?'
-)
-){
-return;
-}
-
-state=restored;
-
-localStorage.setItem(
-KEY,
-JSON.stringify(state)
-);
-
-renderAll();
-
-alert(
-'Respaldo restaurado correctamente.'
-);
-
-}catch{
-
-alert(
-'El archivo de respaldo no es válido.'
-);
-
-}
-
-};
-
-reader.readAsText(file);
-
-}
-
-function exportCSV(){
-
-const rows=[
-[
-'Fecha',
-'Tipo',
-'Categoría',
-'Cuenta',
-'Monto',
-'Nota'
-]
-];
-
-state.transactions.forEach(t=>{
-
-rows.push([
-
-t.date,
-t.type,
-t.category,
-t.account,
-t.amount,
-t.note||''
-
-]);
-
-});
-
-const csv=
-rows
-.map(row=>
-
-row.map(value=>
-
-`"${String(value)
-.replaceAll('"','""')}"`
-
-).join(',')
-
-)
-.join('\n');
-
-downloadBlob(
-
-new Blob(
-[csv],
-{
-type:'text/csv;charset=utf-8'
-}
-),
-
-`CAB_Finanzas_Movimientos_${localToday()}.csv`
-
-);
+  ctx.fillText(
+    money(expense),
+    x2,
+    base-h2-10
+  );
 
 }
 
 function downloadBlob(blob,name){
 
-const url=
-URL.createObjectURL(blob);
+  const url=
+    URL.createObjectURL(blob);
 
-const a=
-document.createElement('a');
+  const a=
+    document.createElement('a');
 
-a.href=url;
-a.download=name;
+  a.href=url;
 
-document.body.appendChild(a);
+  a.download=name;
 
-a.click();
+  document.body.appendChild(a);
 
-a.remove();
+  a.click();
 
-setTimeout(
-()=>URL.revokeObjectURL(url),
-1000
-);
+  a.remove();
 
-}
-function repairGhostBalanceV3(){
-
-if(!state.ghostBalanceRepairV3 && state.transactions.length===0){
-
-state.accounts.forEach(account=>{
-account.initialBalance=0;
-account.balance=0;
-});
-
-state.ghostBalanceRepairV3=true;
-
-localStorage.setItem(
-KEY,
-JSON.stringify(state)
-);
+  setTimeout(
+    ()=>URL.revokeObjectURL(url),
+    1000
+  );
 
 }
 
+function backupJSON(){
+
+  const backup={
+
+    version:'CAB Finanzas 4.0',
+
+    created:new Date().toISOString(),
+
+    data:state
+
+  };
+
+  downloadBlob(
+
+    new Blob(
+      [
+        JSON.stringify(
+          backup,
+          null,
+          2
+        )
+      ],
+      {
+        type:'application/json'
+      }
+    ),
+
+    `CAB_Finanzas_Respaldo_${localToday()}.json`
+
+  );
+
 }
 
-repairGhostBalanceV3();
+function restoreBackup(event){
+
+  const file=
+    event.target.files[0];
+
+  if(!file)return;
+
+  const reader=
+    new FileReader();
+
+  reader.onload=()=>{
+
+    try{
+
+      const backup=
+        JSON.parse(reader.result);
+
+      const restored=
+        backup.data || backup;
+
+      if(
+        !restored.accounts ||
+        !restored.transactions
+      ){
+        throw new Error();
+      }
+
+      if(
+        !confirm(
+          'Esto reemplazará los datos actuales. ¿Deseas continuar?'
+        )
+      ){
+        return;
+      }
+
+      state=restored;
+
+      persist();
+
+      renderAll();
+
+      alert(
+        'Respaldo restaurado correctamente.'
+      );
+
+    }catch(error){
+
+      alert(
+        'El archivo de respaldo no es válido.'
+      );
+
+    }
+
+  };
+
+  reader.readAsText(file);
+
+}
+
+function exportCSV(){
+
+  const rows=[
+    [
+      'Fecha',
+      'Tipo',
+      'Categoría',
+      'Cuenta',
+      'Monto',
+      'Nota'
+    ]
+  ];
+
+  state.transactions.forEach(t=>{
+
+    rows.push([
+
+      t.date,
+
+      t.type,
+
+      t.category,
+
+      t.account,
+
+      t.amount,
+
+      t.note || ''
+
+    ]);
+
+  });
+
+  const csv=
+
+    rows
+
+      .map(row=>
+
+        row
+
+          .map(v=>
+
+            `"${String(v).replaceAll('"','""')}"`
+
+          )
+
+          .join(',')
+
+      )
+
+      .join('\n');
+
+  downloadBlob(
+
+    new Blob(
+      [csv],
+      {
+        type:'text/csv;charset=utf-8'
+      }
+    ),
+
+    `CAB_Finanzas_Movimientos_${localToday()}.csv`
+
+  );
+
+}
+
+document
+  .querySelectorAll('nav button')
+  .forEach(btn=>{
+
+    btn.addEventListener(
+      'click',
+      ()=>showTab(
+        btn.dataset.tab,
+        btn,
+        btn.dataset.title
+      )
+    );
+
+  });
+
+$('txType')
+  .addEventListener(
+    'change',
+    renderCategoryButtons
+  );
+
+$('saveTxBtn')
+  .addEventListener(
+    'click',
+    addTransaction
+  );
+
+$('addAccountBtn')
+  .addEventListener(
+    'click',
+    addAccount
+  );
+
+$('addBudgetBtn')
+  .addEventListener(
+    'click',
+    addBudget
+  );
+
+$('addGoalBtn')
+  .addEventListener(
+    'click',
+    addGoal
+  );
+
+$('addDebtBtn')
+  .addEventListener(
+    'click',
+    addDebt
+  );
+
+$('search')
+  .addEventListener(
+    'input',
+    renderTransactions
+  );
+
+$('saveEditBtn')
+  .addEventListener(
+    'click',
+    saveEdit
+  );
+
+$('cancelEditBtn')
+  .addEventListener(
+    'click',
+    ()=>$('editModal').classList.remove('open')
+  );
+
+$('backupBtn')
+  .addEventListener(
+    'click',
+    backupJSON
+  );
+
+$('restoreInput')
+  .addEventListener(
+    'change',
+    restoreBackup
+  );
+
+$('csvBtn')
+  .addEventListener(
+    'click',
+    exportCSV
+  );
+
+$('txDate').value=
+  localToday();
+
 renderAll();
+
 </script>
 
 </body>
 </html>
-      
