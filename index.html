@@ -923,22 +923,28 @@ alert('Movimiento guardado.');
 
 function recalculateAccounts(){
 
+// Reparación única del saldo fantasma de versiones anteriores
+if(!state.balanceRepairV1){
+
 state.accounts.forEach(a=>{
 
-if(typeof a.initialBalance==='undefined'){
-
-a.initialBalance=Number(a.balance||0);
-
-}
+a.initialBalance=0;
+a.balance=0;
 
 });
 
+state.balanceRepairV1=true;
+
+}
+
+// Reinicia cada cuenta desde su saldo inicial real
 state.accounts.forEach(a=>{
 
 a.balance=Number(a.initialBalance||0);
 
 });
 
+// Vuelve a calcular usando únicamente los movimientos existentes
 state.transactions.forEach(t=>{
 
 const account=
@@ -947,9 +953,13 @@ state.accounts.find(a=>a.name===t.account);
 if(!account)return;
 
 if(t.type==='Ingreso'){
-account.balance+=Number(t.amount);
+
+account.balance+=Number(t.amount||0);
+
 }else{
-account.balance-=Number(t.amount);
+
+account.balance-=Number(t.amount||0);
+
 }
 
 });
