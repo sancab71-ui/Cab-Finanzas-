@@ -797,29 +797,7 @@ KEY,
 JSON.stringify(state)
 );
 
-renderAll();function repairGhostBalanceOnce(){
-
-if(!state.ghostBalanceRepairV2 && state.transactions.length===0){
-
-state.accounts.forEach(account=>{
-
-account.initialBalance=0;
-account.balance=0;
-
-});
-
-state.ghostBalanceRepairV2=true;
-
-localStorage.setItem(
-KEY,
-JSON.stringify(state)
-);
-
-}
-
-}
-
-repairGhostBalanceOnce();
+renderAll();
 
 }
 
@@ -1807,9 +1785,28 @@ setTimeout(
 );
 
 }
+function repairGhostBalanceV3(){
 
+if(!state.ghostBalanceRepairV3 && state.transactions.length===0){
+
+state.accounts.forEach(account=>{
+account.initialBalance=0;
+account.balance=0;
+});
+
+state.ghostBalanceRepairV3=true;
+
+localStorage.setItem(
+KEY,
+JSON.stringify(state)
+);
+
+}
+
+}
+
+repairGhostBalanceV3();
 renderAll();
-
 </script>
 
 </body>
